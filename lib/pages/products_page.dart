@@ -32,22 +32,25 @@ class _ProductsPageState extends State<ProductsPage> {
       // in the middle of the parent.
       child: productList.isEmpty ||
               (filteredList.isEmpty && searchedText.isNotEmpty)
-          ? const Column(
+          ? Column(
               children: [
                 Padding(
                   padding: EdgeInsets.all(2.0),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Icon(Icons.search),
+                      const Icon(Icons.search),
                       SizedBox(
                         width: 300,
                         height: 60,
                         child: TextField(
                           maxLines: 1,
                           maxLength: 50,
-                          decoration:
-                              InputDecoration(hintText: Strings.searchHint),
+                          decoration: const InputDecoration(
+                              hintText: Strings.searchHint),
+                          onChanged: (value) {
+                            onSearch(value);
+                          },
                         ),
                       ),
                     ],
