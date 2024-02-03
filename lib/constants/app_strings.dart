@@ -10,4 +10,5 @@ class Strings{
   static const String addToCart = "Add to Cart";
   static const String itemAdded = "Item added!";
   static const String noProductAvailable = "No Products Available";
+  static const String searchHint = "Search...";
 }
